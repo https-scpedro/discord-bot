@@ -1,13 +1,13 @@
 import discord as dc
 from discord.ext import commands
 
-class UtilitiesCog(commands.cog):
+class UtilitiesCog(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
     # Mensagem de boas vindas para membro novo
     @commands.Cog.listener()
-    async def on_member_join(member):
+    async def on_member_join(self, member):
         welcome_channel = dc.utils.get(member.guild.text_channels, name='Boas-Vindas')
         embed = dc.Embed()
         embed.title = "Bem-vindo!"
@@ -32,7 +32,7 @@ class UtilitiesCog(commands.cog):
     # Comandos Git
     @commands.command()
     async def git(self, ctx: commands.Context):
-        embed = dc.Embed
+        embed = dc.Embed()
         embed.title = "Principais comandos do Git"
         embed.description = (
             "Configurações iniciais:\n"
@@ -53,6 +53,7 @@ class UtilitiesCog(commands.cog):
             "`git checkout <nome-da-branch>` - Muda para a branch especificada\n"
             "`git merge <nome-da-branch>` - Mescla a branch especificada na branch atual\n"
         )
+        await ctx.send(embed=embed)
 
 async def setup(bot):
     await bot.add_cog(UtilitiesCog(bot))
