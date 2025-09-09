@@ -35,11 +35,11 @@ class UtilitiesCog(commands.Cog):
         embed = dc.Embed()
         embed.title = "Principais comandos do Git"
         embed.description = (
-            "Configurações iniciais:\n"
+            "**⚙️ Configurações iniciais**:\n"
             "`git init` - Cria um novo repositório Git\n"
             "`git clone <url>` - Baixa uma cópia de um repositório remoto\n\n"
 
-            "Comandos do dia a dia:\n"
+            "**🏃 Comandos do dia a dia** :\n"
             "`git status` - Mostra o estado atual do repositório: quais arquivos foram modificados, quais estão prontos para commit, etc...\n"
             "`git add <arquivo>` - Adiciona um arquivo específico à área de stage\n"
             "`git add .` - Adiciona todos os arquivos modificados à área de stage\n"
@@ -47,7 +47,7 @@ class UtilitiesCog(commands.Cog):
             "`git push` - Envia os commits locais para o repositório remoto\n"
             "`git pull` - Atualiza o repositório local com as mudanças do repositório remoto\n\n"
 
-            "Trabalhando com branches:\n"
+            "**🌿 Trabalhando com branches** :\n"
             "`git branch` - Lista todas as branches no repositório\n"
             "`git branch <nome-da-branch>` - Cria uma nova branch\n"
             "`git checkout <nome-da-branch>` - Muda para a branch especificada\n"
